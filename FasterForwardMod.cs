@@ -92,7 +92,7 @@ public class FasterForwardMod : BloonsTD6Mod
         {
             PopupScreen.instance.ShowSetValuePopup("Custom Fast Forward Speed",
                 "Sets the Fast Forward speed to the specified value",
-                new Action<int>(s => SetSpeed(Mathf.Clamp(s, 1, 100))), (int) TimeHelper.OverrideFastForwardTimeScale);
+                new Action<int>(s => SetSpeed(Mathf.Clamp((1/s), 1, 100))), (int) TimeHelper.OverrideFastForwardTimeScale);
         }
     }
 
